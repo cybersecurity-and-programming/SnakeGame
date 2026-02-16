@@ -20,9 +20,9 @@ public class Casilla {
     
     public Casilla (){
         this.pos = new Posicion();
-	this.pos.setX(0);
-	this.pos.setY(0);
-	this.tipo = ' ';	
+		this.pos.setX(0);
+		this.pos.setY(0);
+		this.tipo = ' ';	
     }
     
     private void setTipo(char tipo){
@@ -37,3 +37,4 @@ public class Casilla {
         return tipo;
     }
 }
+
