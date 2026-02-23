@@ -4,7 +4,7 @@ public class Serpiente {
 
     /**
      * #################################################
-     * # 		 Serpiente                     #
+     * # 		         Serpiente                     #
      * #################################################
      * # Serpiente();                                  #
      * # Serpiente (Posicion [] cuerpo, int direccion);#
@@ -108,4 +108,5 @@ public class Serpiente {
     }
 }
 	
+
 
