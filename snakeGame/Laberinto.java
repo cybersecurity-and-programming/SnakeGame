@@ -35,17 +35,6 @@ public class Laberinto {
     private int puntuacion;
     private Record records;
     private int flag;
-
-    /**
-      * Constructor que inicializa todos los atributos de la clase Laberinto
-      * @param ancho
-      * @param alto
-      * @param casillas
-      * @param snake
-      * @param mouse
-      * @param puntuacion
-      * @param records
-    */
 	
     public Laberinto(int ancho, int alto, Casilla [][] casillas, Serpiente snake, Raton [] mouse, int puntuacion, Record records){
         this.ancho = ancho;
@@ -58,33 +47,30 @@ public class Laberinto {
     }
 
     public Laberinto (){
-	this.ancho = 29;
-	this.alto = 31;
-	this.records = new Record();
-	this.puntuacion = 0;
-	this.flag=1;
+		this.ancho = 29;
+		this.alto = 31;
+		this.records = new Record();
+		this.puntuacion = 0;
+		this.flag=1;
 
-        //Posicion inicial de la serpiente en el tablero
         Posicion [] locSnake = new Posicion [3];
-	locSnake[0]= new Posicion(14,15);
-	locSnake[1]= new Posicion(14,16);
+		locSnake[0]= new Posicion(14,15);
+		locSnake[1]= new Posicion(14,16);
         locSnake[2]= new Posicion(14,17);
         this.snake = new Serpiente (locSnake,Serpiente.ARRIBA);
         
-        //Posicion de los ratones en el tablero
         Posicion [] locMouse = new Posicion[4];
         locMouse[0]= new Posicion(2,2);
-	locMouse[1]= new Posicion(26,2);
-	locMouse[2]= new Posicion(2,29);
-	locMouse[3]= new Posicion(26,29);
+		locMouse[1]= new Posicion(26,2);
+		locMouse[2]= new Posicion(2,29);
+		locMouse[3]= new Posicion(26,29);
         
-        //Insertar ratones en el tablero
         this.mouse = new Raton[4];
         for (int i =0;i<mouse.length;i++) {
             this.mouse[i] = new Raton(locMouse[i]);
         }
         
-	this.casillas = new Casilla[alto][ancho];
+		this.casillas = new Casilla[alto][ancho];
         char [][] tablero = {
             {'#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#'},
             {'#',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','#'},
@@ -290,41 +276,7 @@ public class Laberinto {
         flag = 1; // seguimos jugando
     }
 
-    /**
-     * 
-     * @return 
-     */
     public int getFlag(){
         return flag;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
